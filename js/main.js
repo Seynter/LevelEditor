@@ -81,11 +81,11 @@ function grid(width, height){
   if (isShiftPressed){//если нажат shift
     ctx.lineWidth = 1;
     ctx.strokeStyle = 'black';
-    for (let i = 1; i <  canvas.width / width; i++){
-      ctx.stroke(new Path2D(`M0 ${width * i} h ${canvas.width}`));
+    for (let i = 1; i <  canvas.width / height; i++){
+      ctx.stroke(new Path2D(`M0 ${height * i} h ${canvas.width}`));
     }
-    for (let i = 1; i < canvas.height / height; i++){
-      ctx.stroke(new Path2D(`M${height * i} 0  v ${canvas.height}`));
+    for (let i = 1; i < canvas.height / width; i++){
+      ctx.stroke(new Path2D(`M${width * i} 0 v ${canvas.height}`));
     }
   }
 }
@@ -104,10 +104,6 @@ canvas.addEventListener('mousemove', function(event){
     if (isShiftPressed){
       dragElem.x = Math.round((dragElem.x) / canvas.width * dragElem.width) * canvas.width / dragElem.width;
       dragElem.y = Math.round((dragElem.y) / canvas.height * dragElem.height) * canvas.height / dragElem.height;
-      console.log("---------------");
-      console.log(canvas.width / dragElem.width, dragElem.x);
-      console.log(canvas.height / dragElem.height, dragElem.y);
-      console.log("---------------");
     }
   }
 });
