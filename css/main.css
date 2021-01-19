@@ -1,0 +1,17 @@
+#canvas{
+  width: 94vh;
+  height: 94vh;
+  background-color: #669999;
+  display: block;
+  border: 1px solid black;
+}
+
+.save{
+}
+
+body{
+  background-color: #669999;
+  margin-top: 10px;
+  margin: 10px;
+  overflow: hidden;
+}
